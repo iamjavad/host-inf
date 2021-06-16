@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-from kavenegar import APIException
 import shodan
 import os
+import json
 
 KEY = ""
 
@@ -16,6 +16,8 @@ print("org: {}".format(host['org']))
 
 print("os: {}".format(host['os']))
 
+print("asn: {}".format(host['asn']))
+
 for item in host['data']:
     print(item['port'])
     print("country: {}".format(item['location']['country_name']))
@@ -24,4 +26,6 @@ for item in host['data']:
     print("region code: {}".format(item['location']['region_code']))
     print("latitude: {}".format(item['location']['latitude']))
     print("longitude: {}".format(item['location']['longitude']))
-    print(item['location'])
+    #print(item['location'])
+
+#print(json.dumps(host, indent=2))

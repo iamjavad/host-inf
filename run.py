@@ -10,6 +10,8 @@ api = shodan.Shodan(KEY)
 
 host = api.host("")
 
+os.system("clear")
+
 print("ip address: {}".format(host['ip_str']))
 
 print("org: {}".format(host['org']))

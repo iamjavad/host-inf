@@ -5,11 +5,11 @@ import os
 import json
 from banner import banner
 
-KEY = "NDciAIz4884Y2EaFjDVzBmHMXer4sTbC"
+KEY = ""
 
 api = shodan.Shodan(KEY)
 
-host = api.host("185.202.113.3")
+host = api.host("")
 
 os.system("clear")
 

@@ -3,14 +3,17 @@
 import shodan
 import os
 import json
+from banner import banner
 
-KEY = ""
+KEY = "NDciAIz4884Y2EaFjDVzBmHMXer4sTbC"
 
 api = shodan.Shodan(KEY)
 
-host = api.host("")
+host = api.host("185.202.113.3")
 
 os.system("clear")
+
+banner()
 
 print("ip address: {}".format(host['ip_str']))
 
